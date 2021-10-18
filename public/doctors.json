@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Dr. Thomson Abarto", 
+        "title": "Head Doctor",
+        "key": 1,
+        "qualification": "MDS, BDS - Anesthesiology, 10 Years Experience",
+        "patients": "780+ Patients",
+        "awards": "Robert L. Nobel Price",
+        "img" : "https://templates.envytheme.com/medip/default/assets/images/doctors-details/doctors-details-1.jpg",
+        "text": "Anesthesia was discovered. Do you know what it means to relieve man of his pain and suffering?"
+    },
+    {
+        "name": "Thomas Alvenas", 
+        "title": "Dental Surgeon",
+        "key": 2,
+        "qualification": "MDS, BDS - Dental and Oral Implantology, 5 Years Experience",
+        "patients": "470+ Patients",
+        "awards": "National Specialist Register in Dental",
+        "img" : "https://templates.envytheme.com/medip/default/assets/images/doctors/doctor-2.png",
+        "text": "It is so important to brush your teeth, take care of your oral health, and thank your dental hygienist."
+    },
+    {
+        "name": "Come Bertrand", 
+        "title": "Cardiology",
+        "key": 3,
+        "qualification": "MDS, BDS - Cardiology, 1 Years Experience",
+        "patients": "100+ Patients",
+        "awards": "Robert L. Nobel Price",
+        "img" : "https://templates.envytheme.com/medip/default/assets/images/doctors/doctor-3.png",
+        "text": "The central problem in heart failure is not that patients are short of breath or that they retain fluid: the problem is that they die."
+    },
+    {
+        "name": "Monroe Bond", 
+        "title": "Ophthalmology",
+        "key": 4,
+        "qualification": "MDS, BDS - Ophthalmology, 2 Years Experience",
+        "patients": "150+ Patients",
+        "awards": "Best Ophthalmology Of The Year",
+        "img" : "https://templates.envytheme.com/medip/default/assets/images/doctors/doctor-4.png",
+        "text": "The soul, fortunately, has an interpreter – often an unconscious but still a faithful interpreter – in the eye."
+    },
+    {
+        "name": "Loki Bright", 
+        "title": "Orthopedics",
+        "key": 5,
+        "qualification": "MDS, BDS - Orthopedics, 3 Years Experience",
+        "patients": "220+ Patients",
+        "awards": "Edison Award",
+        "img" : "https://templates.envytheme.com/medip/default/assets/images/doctors/doctor-5.png",
+        "text": "For people who dont know me, I practiced medicine in Casper, Wyoming for 25 years as an orthopedic surgeon, taking care of families in Wyoming."
+    },
+    {
+        "name": "Kendal Gourge", 
+        "title": "Neurology",
+        "key": 6,
+        "qualification": "MDS, BDS - Neurology and Implantology, 1 Years Experience",
+        "patients": "90+ Patients",
+        "awards": "National Price For Medicine",
+        "img" : "https://templates.envytheme.com/medip/default/assets/images/doctors/doctor-6.png",
+        "text": "There is a neurologist, a woman over at Harvard who wanted me to come talk to them, and in France I have a lot of readers in the sciences."
+    },
+    {
+        "name": "Reina Brooks", 
+        "title": "Periodontology",
+        "key": 7,
+        "qualification": "MDS, BDS - Periodontology, 3 Years Experience",
+        "patients": "210+ Patients",
+        "awards": "Best Performer Of The Year",
+        "img" : "https://templates.envytheme.com/medip/default/assets/images/doctors/doctor-1.png",
+        "text": "Periodontal disease is a chronic inflammatory disease that affects the gum tissue and bone supporting the teeth."
+    },
+    {
+        "name": "Deniyal Polok", 
+        "title": "Ophthalmologist",
+        "key": 8,
+        "qualification": "MDS, MD. of Ophthalmologist, 4 Years Experience",
+        "patients": "350+ Patients",
+        "awards": "Best Performer Of The Year",
+        "img" : "https://templates.hibootstrap.com/opnix/default/assets/images/doctors/main3.png",
+        "text": " If you're laboring up a steep hill, imagine that a towrope is attached to the center of your chest, pulling you steadily toward the top."
+    }
+]
