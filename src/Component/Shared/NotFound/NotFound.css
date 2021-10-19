@@ -1,0 +1,9 @@
+.error-bg{
+    background-color: #d4eaf6;
+    width: 100%;
+    height: 350px;
+}
+.error-text{
+    font-size: 45px;
+    font-weight: 800;
+}

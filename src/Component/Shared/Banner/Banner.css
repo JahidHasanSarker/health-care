@@ -1,0 +1,26 @@
+.banner{
+    position: relative;
+}
+.bg-img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+}
+.bg-text{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+}
+.carousel-caption {
+    position: absolute;
+    right: 45%;
+    top: 45%;
+    bottom: 1.25rem;
+    left: 0%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+}

@@ -1,0 +1,10 @@
+.header-link{
+    color: #5b5b98 !important;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s;
+    margin-left:10px !important;
+}
+.header-link:hover{
+    color: #169fed !important;
+}
