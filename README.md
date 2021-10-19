@@ -16,7 +16,7 @@ project ive link [https://admiring-volhard-04d242.netlify.app/](https://admiring
 - Reaload Free Website
 - Beautiful Design
 - Component Base Website
-- and so many thing 
+- and so many things 
 
 
 Thank you All 
