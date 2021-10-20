@@ -7,17 +7,21 @@ const NotFound = () => {
     return (
         <div>
             <div className="error-bg w-100">
+                        
                         <Container>
-                        <div className="d-flex justify-content-center align-items-center my-5">
-                                <div className="me-5 pe-5">
-                                    <h2 className="error-text">404 Error</h2>
-                                    <p className="me-5 pe-5">The page you are looking for might have been removed had its name changed or is temporarily unavailable.</p>
+                        <div className="d-flex justify-content-between align-items-center mb-5">
+                                <div className="">
+                                    <h3 className="error-text">404 Error</h3>
+                                    <p className="my-4">The page you are looking for might have been removed <br/> had its name changed or is temporarily unavailable.</p>
                                 </div>
-                                <div className="my-5">
-                                    <img height="300px" src="https://templates.envytheme.com/medip/default/assets/images/page-banner/banner-2.png" alt="" />
+                                <div className="my-5 ms-5">
+                                    <img height="300px" width="300px" src="https://templates.envytheme.com/medip/default/assets/images/page-banner/banner-2.png" alt="" />
                                 </div>
+                                
                         </div>
                         </Container>
+
+
             </div>
                         <div className="text-center py-3">
                             <div className="py-3">

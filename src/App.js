@@ -2,19 +2,16 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
 } from "react-router-dom";
 import Header from "./components/Home/Header/Header";
 import Home from "./components/Home/Home/Home";
 import ServiceDetail from "./components/ServiceDetail/ServiceDetail";
 import Services from "./components/Services/Services";
 import Footer from "./components/Shared/Footer/Footer";
-
 import Login from "./components/Shared/Login/Login";
-
 import NotFound from "./components/Shared/NotFound/NotFound";
-
-
+import PrivateRoute from "./components/Shared/Login/PriveteRoute/PriveteRoute"
 import AuthProvider from "./Context/AuthProvider";
 
 
@@ -37,12 +34,12 @@ function App() {
           <Route path="/services">
             <Services></Services>
           </Route>
-          <Route path="/servicedetails">
-          <ServiceDetail></ServiceDetail>
-          </Route>
-          {/* <PrivetRoute path="/bookVehicle/:id">
+
+          <PrivateRoute path="/serviceDetail/:id">
             <ServiceDetail></ServiceDetail>
-          </PrivetRoute> */}
+          </PrivateRoute>
+
+
           <Route path="*">
             <NotFound></NotFound>
           </Route>

@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import {  Col, Container, Image, Nav, Navbar, Row } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 import './Header.css'
 import Img from '../../../logo.png'
-import { Navbar, NavbarBrand } from 'react-bootstrap';
+
 
 
 
@@ -13,45 +14,69 @@ const Header = () => {
     console.log(user);
     return (
 
-       <Navbar fixed="top" className="bg-white">
-            <div className="container">
-                <NavbarBrand className="me-auto" href="#home"><img src={Img} alt=""/></NavbarBrand>
-                <nav className="navbar navbar-expand-lg navbar-light">
-                    <div className="container-fluid">
-                        <div className="d-flex">
-                            
-                            
-                        </div>
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div className="collapse navbar-collapse" id="navbarNavAltMarkup  ms-auto">
-                            <div className="navbar-nav">
+        <Navbar bg="light" variant="light" sticky="top" collapseOnSelect expand="lg" >
+                <Container>
+                    <Navbar.Brand>
+                    <Nav.Link> 
+                        <NavLink exact="true" to="/">
+                        <img width="130px" src={Img} alt=""/>
+                              </NavLink>
+                        </Nav.Link>
+                        </Navbar.Brand>
+                    <Navbar.Toggle />
+                    <Navbar.Collapse className="justify-content-end">
+                        <Nav.Link>
+                        <NavLink className="custom" activeClassName="activeStyle" to="/home">
+                                  Home
+                        </NavLink>
+                        </Nav.Link>
+                        <Nav.Link>
+                        <NavLink className="custom" activeClassName="activeStyle" to="/about">
+                                  About us
+                        </NavLink>
+            
+                        </Nav.Link>
+                        <Nav.Link>
+                        <NavLink className="custom" activeClassName="activeStyle" to="/services">
+                                  Our Doctors
+                        </NavLink>
+            
+                        </Nav.Link>
+                        <Nav.Link className="custom" activeClassName="activeStyle" to="/contact">
+                                    Contact Us
+                        </Nav.Link>
 
-                                <Link to="/home" className="nav-link">Home</Link>
-                                <Link to="/service" className="nav-link">About</Link>
-                                <Link to="/home" className="nav-link">Services</Link>
-                                <Link to="/home" className="nav-link">Contact</Link>
-                            
-                                { user.email?
-                                    <Link to="/login">
-                                    <button onClick={logOut} className="btn btn-warning me-2" >Log-out</button>
-                                    </Link>
-                                    :
-                                    <Link to="/login">
-                                    <button className="btn btn-warning me-2" >Log In</button>
-                                    </Link>
-
-                                }
-                                {user.email && <span className="text-black d-flex align-items-center" >{user.displayName}</span>}
-                                
+                        {user.email && 
+                        <Nav.Link>
+                            <div>
+                            <Row className="d-flex align-items-center">
+                            <Col sm={2}>
+                                <Image className="header-pic-size" src={user?.photoURL} roundedCircle />
+                            </Col>
+                            <Col sm={9} className="header-pic ms-3" style={{ color: 'green', fontWeight: 'bold' }}> {user?.displayName}
+                            </Col>
+                            </Row>
                             </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-       </Navbar>
+                        </Nav.Link> }
+                        {
+                            user.email ?
+                        <Nav.Link>
+                        <NavLink className="custom-logout d-flex align-items-center" activeClassName="activeStyle" to="/login" onClick={logOut}>log out <i className="fas fa-sign-out-alt ms-2"></i>
+                        </NavLink>
+                        </Nav.Link>
+                        :
+                        <Nav.Link>
+                        <NavLink className="custom d-flex align-items-center " activeClassName="activeStyle" to="/login">
+                        <i class="fas fa-user-plus me-2"></i> Register 
+                        </NavLink>
+                        </Nav.Link>}
+
+                        
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
         
-    );
-};
-export default Header;
+        );
+    };
+    export default Header;
+    
