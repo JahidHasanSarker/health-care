@@ -1,7 +1,7 @@
-
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
+import './ServiceDetails.css'
 
 
 const ServiceDetail = () => {
@@ -35,20 +35,31 @@ const ServiceDetail = () => {
  
                             </div>
                                     <Container>
-                                    <div className="d-flex">
-                                        <div className="mt-5">
-                                            <img className="img-radious" height="500px" src={ExactIteam?.img} alt="" />
-                                        </div>
-                                        <div className="mt-5">
+                                        <Row>
                                             
-                                            <h1>This is service Detail Page </h1>
-                                            <h3>Name : {ExactIteam[0]?.name}</h3>
-                                            <h3>Title : {ExactIteam[0]?.title}</h3>
-                                            <p>description : {ExactIteam[0]?.qualification}</p>
-                                        
-                                        
-                                        </div>
-                                    </div>
+                                                <Col md={6} sm={12}>
+                                                    <div className="my-5 text-center img-radious">
+                                                        <img className="shadow-lg" height="400px" src={ExactIteam[0]?.img} alt="" />
+                                                    </div>
+                                                </Col>
+
+                                                <Col md={6} sm={12}>
+                                                    <div className="mt-5">
+                      
+                                                        <h1 className="fw-bold pt-2">Dr. {ExactIteam[0]?.name}</h1>
+                                                        <h6>{ExactIteam[0]?.title} Specialist</h6>
+                                                        <div className="details-info my-5">
+                                                            <p className="text-muted">({ExactIteam[0]?.certification})</p>
+                                                            <p>Qualification  <span>{ExactIteam[0]?.qualification}</span></p>
+                                                            <p>Awards  <span>{ExactIteam[0]?.awards}</span></p>
+                                                            <p>{ExactIteam[0]?.patients}</p>
+                                                            <p className="text-muted fw-normal pt-4">{ExactIteam[0]?.text}</p>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </Col>
+                                            
+                                        </Row>
                                     </Container>
                             </div>
     );

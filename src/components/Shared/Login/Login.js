@@ -1,11 +1,23 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
+import { useHistory, useLocation } from "react-router";
 import './Login.css';
 
 
 const Login = () => {
-    const {googleSignIn} = useAuth();
+    const {signInUsingGoogle, register} = useAuth();
+
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_uri = location.state?.from || '/'
+
+    const googleSignIn = () => {
+        signInUsingGoogle()
+        .then(result =>{
+            history.push(redirect_uri)
+        });
+    }
     return (
 
         <div className="maincontainer">
@@ -34,7 +46,7 @@ const Login = () => {
                                             <label htmlFor="customCheck1" className="form-check-label">Remember password</label>
                                         </div>
                                         <div className="d-grid gap-2 mt-2">
-                                        <Button variant="outline-primary" className=" btn-block text-capitalize mb-2 rounded-pill shadow-sm">Sign in</Button>
+                                        <Button onClick={register} variant="outline-primary" className=" btn-block text-capitalize mb-2 rounded-pill shadow-sm">Sign in</Button>
                                         </div>
                                         <div className="d-grid gap-2 mt-2">
                                         <Button onClick={googleSignIn}  variant="primary" className="btn-block text-capitalize mb-2 rounded-pill shadow-sm">Google Sign in</Button>

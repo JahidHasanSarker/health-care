@@ -7,6 +7,16 @@
     font-size: 45px;
     font-weight: 800;
 }
-.img-radious{
+.img-radious img{
     border-radius: 20px;
+}
+.details-info p{
+    font-size: 18px;
+    font-weight: bold;
+    color: #07003b;
+}
+.details-info span{
+    color: #6f8ba4;
+    font-weight: 400;
+    margin-left: 20px;
 }
