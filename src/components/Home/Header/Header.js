@@ -2,6 +2,7 @@ import React from 'react';
 import useAuth from '../../../hooks/useAuth';
 import {  Col, Container, Image, Nav, Navbar, Row } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import './Header.css'
 import Img from '../../../logo.png'
 
@@ -31,7 +32,7 @@ const Header = () => {
                         </NavLink>
                         </Nav.Link>
                         <Nav.Link>
-                        <NavLink className="custom" activeClassName="activeStyle" to="/about">
+                        <NavLink as={HashLink} className="custom" to="/home#about">
                                   About us
                         </NavLink>
             
@@ -42,7 +43,7 @@ const Header = () => {
                         </NavLink>
             
                         </Nav.Link>
-                        <Nav.Link className="custom" activeClassName="activeStyle" to="/contact">
+                        <Nav.Link as={HashLink} className="custom" activeClassName="activeStyle" to="/home#contact">
                                     Contact Us
                         </Nav.Link>
 
