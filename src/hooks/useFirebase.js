@@ -1,39 +1,52 @@
-import { getAuth, signInWithPopup,  GoogleAuthProvider, onAuthStateChanged, signOut} from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut} from "firebase/auth";
 import { useEffect, useState } from "react";
 import authInit from "../components/Shared/Login/firebase/firebase.init";
 authInit();
 
 const useFirebase = () => {
-    const [user, setUser] = useState({});
-
     const auth = getAuth();
-    const googleProvider = new GoogleAuthProvider();
+    const [user, setUser] = useState({});
+    const [isLoading, setIsLoading] = useState(true);
 
-    const signInUsingGoogle = () => {
-        return signInWithPopup(auth, googleProvider);
+    console.log(user);
+
+    const googleSignIn = () => {
+        setIsLoading(true)
+        const googleProvider = new GoogleAuthProvider();
+        signInWithPopup(auth, googleProvider)
+            .then((result) => {
+                const user = result.user;
+                setUser(user)
+
+            })
+            .finally(() => setIsLoading(false));
     }
+
+    useEffect(() => {
+        const unsubcribed = onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setUser(user)
+            } else {
+                setUser({ })
+            }
+            setIsLoading(false)
+        });
+        return () => unsubcribed;
+    }, [isLoading])
 
     const logOut = () => {
-        signOut(auth)
-            .then(() => {
-                setUser({})
-            })
+        setIsLoading(true)
+        signOut(auth).then(() => { })
+        .finally(() => setIsLoading(false))
     }
-
-    // observe whether user auth state changed or not
-    useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (user) => {
-            if (user) {
-                setUser(user);
-            }
-        });
-        return () => unsubscribe;
-    }, []);
-
     return {
         user,
-        signInUsingGoogle,
+        googleSignIn,
+        isLoading,
         logOut
+
     }
-}
+
+};
+
 export default useFirebase;
